@@ -1,6 +1,4 @@
-<div class="row">
-  <div class="col-6">
-    <%= form_with(model: message, local: true) do |f| %>
+<%= form_with(model: message, local: true) do |f| %>
       <% if message.errors.any? %>
         <div id="error_explanation" class="alert alert-warning">
           <ul class="mb-0">
@@ -10,18 +8,16 @@
           </ul>
         </div>
       <% end %>
-      
+
       <div class="form-group">
-      <%= f.label :title, 'タイトル' %>
-      <%= f.text_field :title, class: 'form-control' %>
+        <%= f.label :title, 'タイトル' %>
+        <%= f.text_field :title, class: 'form-control' %>
       </div>
-      
+
       <div class="form-group">
-      <%= f.label :content, 'メッセージ' %>
-      <%= f.text_field :content, class: 'form-control'  %>
+        <%= f.label :content, 'メッセージ' %>
+        <%= f.text_field :content, class: 'form-control' %>
       </div>
-      
-      <%= f.submit '投稿',class: 'btn btn-primary'%>
-    <% end %>
-  </div>
-</div>
+
+      <%= f.submit '投稿', class: 'btn btn-primary' %>
+<% end %>
